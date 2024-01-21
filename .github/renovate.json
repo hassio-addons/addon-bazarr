@@ -28,7 +28,7 @@
     {
       "fileMatch": ["/Dockerfile$"],
       "matchStrings": [
-        "ARG BAZARRR_VERSION=[\"']?(?<currentValue>.+?)[\"']?\\s+"
+        "ARG BAZARR_VERSION=[\"']?(?<currentValue>.+?)[\"']?\\s+"
       ],
       "datasourceTemplate": "github-releases",
       "depNameTemplate": "morpheus65535/bazarr",
