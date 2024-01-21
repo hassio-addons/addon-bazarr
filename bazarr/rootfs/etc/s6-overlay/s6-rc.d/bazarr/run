@@ -1,0 +1,9 @@
+#!/command/with-contenv bashio
+# shellcheck shell=bash
+# ==============================================================================
+# Home Assistant Community Add-on: Bazarr
+# Runs Bazarr
+# ==============================================================================
+bashio::log.info 'Starting Bazarr...'
+
+python3 /opt/bin/bazarr.py --no-update --config /config
