@@ -11,20 +11,20 @@ ARG UNRAR_VERSION=6.2.12
 # hadolint ignore=DL3003,DL3042
 RUN \
   apk add --no-cache --virtual .build-dependencies \
-    autoconf=2.71-r2 \
+    autoconf=2.72-r0 \
     automake=1.16.5-r2 \
     build-base=0.5-r3 \
-    linux-headers=6.5-r0 \
-    musl-dev=1.2.4_git20230717-r4 \
-    py3-pip=23.3.1-r0 \
-    python3-dev=3.11.9-r0 \
+    linux-headers=6.6-r0 \
+    musl-dev=1.2.5-r0 \
+    py3-pip=24.0-r2 \
+    python3-dev=3.12.3-r1 \
   \
   && apk add --no-cache \
     7zip=23.01-r0 \
-    ffmpeg=6.1.1-r0 \
-    mediainfo=23.11-r0 \
-    py3-setuptools=68.2.2-r0 \
-    python3=3.11.9-r0 \
+    ffmpeg=6.1.1-r7 \
+    mediainfo=24.04-r0 \
+    py3-setuptools=69.5.1-r0 \
+    python3=3.12.3-r1 \
     unzip=6.0-r14 \
   \
   && curl -J -L -o /tmp/unrar.tar.gz \
