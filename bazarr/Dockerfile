@@ -23,7 +23,7 @@ RUN \
     7zip=23.01-r0 \
     ffmpeg=6.1.1-r8 \
     mediainfo=24.04-r0 \
-    py3-setuptools=69.5.1-r0 \
+    py3-setuptools=70.3.0-r0 \
     python3=3.12.3-r1 \
     unzip=6.0-r14 \
   \
