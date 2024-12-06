@@ -12,20 +12,20 @@ ARG UNRAR_VERSION=6.2.12
 RUN \
   apk add --no-cache --virtual .build-dependencies \
     autoconf=2.72-r0 \
-    automake=1.16.5-r2 \
+    automake=1.17-r0 \
     build-base=0.5-r3 \
-    linux-headers=6.6-r0 \
-    musl-dev=1.2.5-r0 \
-    py3-pip=24.0-r2 \
+    linux-headers=6.6-r1 \
+    musl-dev=1.2.5-r8 \
+    py3-pip=24.3.1-r0 \
     python3-dev=3.12.8-r0 \
   \
   && apk add --no-cache \
-    7zip=23.01-r0 \
-    ffmpeg=6.1.1-r8 \
-    mediainfo=24.04-r0 \
+    7zip=24.08-r0 \
+    ffmpeg=6.1.2-r0 \
+    mediainfo=24.11-r0 \
     py3-setuptools=70.3.0-r0 \
     python3=3.12.8-r0 \
-    unzip=6.0-r14 \
+    unzip=6.0-r15 \
   \
   && curl -J -L -o /tmp/unrar.tar.gz \
       "https://www.rarlab.com/rar/unrarsrc-${UNRAR_VERSION}.tar.gz" \
