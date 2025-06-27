@@ -1,4 +1,4 @@
-ARG BUILD_FROM=ghcr.io/hassio-addons/base:17.2.5
+ARG BUILD_FROM=ghcr.io/hassio-addons/base:18.0.0
 # hadolint ignore=DL3006
 FROM ${BUILD_FROM}
 
@@ -11,19 +11,19 @@ ARG UNRAR_VERSION=6.2.12
 # hadolint ignore=DL3003,DL3042
 RUN \
   apk add --no-cache --virtual .build-dependencies \
-    autoconf=2.72-r0 \
-    automake=1.17-r0 \
+    autoconf=2.72-r1 \
+    automake=1.17-r1 \
     build-base=0.5-r3 \
-    linux-headers=6.6-r1 \
-    musl-dev=1.2.5-r9 \
-    py3-pip=24.3.1-r0 \
+    linux-headers=6.14.2-r0 \
+    musl-dev=1.2.5-r10 \
+    py3-pip=25.1.1-r0 \
     python3-dev=3.12.11-r0 \
   \
   && apk add --no-cache \
-    7zip=24.08-r0 \
-    ffmpeg=6.1.2-r1 \
-    mediainfo=24.11-r0 \
-    py3-setuptools=70.3.0-r0 \
+    7zip=24.09-r0 \
+    ffmpeg=6.1.2-r2 \
+    mediainfo=25.03-r0 \
+    py3-setuptools=80.9.0-r0 \
     python3=3.12.11-r0 \
     unzip=6.0-r15 \
   \
