@@ -1,7 +1,7 @@
 #!/command/with-contenv bashio
 # shellcheck shell=bash
 # ==============================================================================
-# Home Assistant Community Add-on: Bazarr
+# Home Assistant Community App: Bazarr
 # Take down the S6 supervision tree when Bazarr fails
 # ==============================================================================
 declare exit_code_container

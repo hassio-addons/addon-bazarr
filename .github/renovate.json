@@ -1,5 +1,6 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": ["helpers:pinGitHubActionDigests"],
   "rebaseWhen": "behind-base-branch",
   "dependencyDashboard": true,
   "labels": ["dependencies", "no-stale"],
@@ -51,22 +52,19 @@
       "automerge": true
     },
     {
+      "description": "Packages that live in the Alpine community repository",
       "matchDatasources": ["custom.alpine"],
-      "matchPackageNames": [
-        "alpine_3_24/7zip",
-        "alpine_3_24/ffmpeg",
-        "alpine_3_24/mediainfo"
-      ],
+      "matchPackageNames": ["alpine_3_24/ffmpeg", "alpine_3_24/mediainfo"],
       "registryUrls": [
         "https://dl-cdn.alpinelinux.org/alpine/v3.24/community/x86_64/"
       ]
     },
     {
-      "groupName": "Add-on base image",
+      "groupName": "App base image",
       "matchDatasources": ["docker"]
     },
     {
-      "groupName": "Add-on base image",
+      "groupName": "App base image",
       "matchDatasources": ["docker"],
       "matchUpdateTypes": ["minor", "patch"],
       "automerge": true
