@@ -1,4 +1,4 @@
-ARG BUILD_FROM=ghcr.io/hassio-addons/base:19.0.0
+ARG BUILD_FROM=ghcr.io/hassio-addons/base:21.0.3
 # hadolint ignore=DL3006
 FROM ${BUILD_FROM}
 
@@ -11,28 +11,28 @@ ARG UNRAR_VERSION=6.2.12
 # hadolint ignore=DL3003,DL3042
 RUN \
   apk add --no-cache --virtual .build-dependencies \
-    autoconf=2.72-r1 \
-    automake=1.17-r1 \
-    build-base=0.5-r3 \
-    linux-headers=6.14.2-r0 \
-    musl-dev=1.2.5-r12 \
-    py3-pip=25.1.1-r0 \
-    python3-dev=3.12.13-r0 \
+    autoconf=2.73-r0 \
+    automake=1.18.1-r1 \
+    build-base=0.5-r4 \
+    linux-headers=7.0.0-r1 \
+    musl-dev=1.2.6-r2 \
+    py3-pip=26.1.2-r0 \
+    python3-dev=3.14.7-r1 \
   \
   && apk add --no-cache \
-    7zip=24.09-r0 \
-    ffmpeg=6.1.2-r2 \
-    mediainfo=25.03-r0 \
-    py3-setuptools=80.9.0-r0 \
-    python3=3.12.13-r0 \
-    unzip=6.0-r15 \
+    7zip=26.01-r0 \
+    ffmpeg=8.1.2-r0 \
+    mediainfo=26.01-r0 \
+    py3-setuptools=82.0.1-r1 \
+    python3=3.14.7-r1 \
+    unzip=6.0-r16 \
   \
   && curl -J -L -o /tmp/unrar.tar.gz \
       "https://www.rarlab.com/rar/unrarsrc-${UNRAR_VERSION}.tar.gz" \
   && tar zxvf \
       /tmp/unrar.tar.gz \
       -C /tmp \
-  \  
+  \
   && cd /tmp/unrar \
   && make \
   && install -v -m755 unrar /usr/local/bin \
